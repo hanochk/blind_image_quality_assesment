@@ -1,3 +1,12 @@
+#This challenge could be addressed by: 
+##Classification
+###Multi-class in image level, based on binary classification in atomic granularity of tile-level. Challenge - no real object to classify but rather the notion of sharp edges or good/bad tile.
+###MIL (Multiple Instance learning) – there is certain evidence for one of the classes among the tiles (instances/tiles in a bucket/image). Based on embeddings out of a backbone, employ the Gated Attention approach by Max-wellington
+##Ordinal regression 
+#Anomaly tile detection – by contrastive based => noisy labels are major shortcomings 
+![image](https://github.com/hanochk/blind_image_quality_assesment/assets/8217391/126ce787-333b-4bb0-9d36-e1c16ce46701)
+
+
 Asses/classify the image quality by learning what is the concept of bad/marginal/good quality. 
 There is no real object to classify but rather patterns/semantics which manifest the quality
 
