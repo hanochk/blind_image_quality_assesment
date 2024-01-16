@@ -39,14 +39,13 @@ Scene Statistic (NSS) models [5] that capture the statistical \naturalness" of n
 The hypothesis motivating our research is that the presence of image distortion such as JPEG compression, noise, blur, etc. is captured and modelled by these features as well
 
 
-Late fusion:
-Hard fusion : voting of tile’s final class
-Soft fusion  : avg pooling of tiles embeddings
-Weighted soft fusion (Attention) : more generalized, inside the NN + pos_embeddings
-Challenge : In image level, data is sparser than in tile level 6K vs. 130K
+## Late fusion:
+### Hard fusion : voting of tile’s final class
+### Soft fusion  : avg pooling of tiles embeddings
+### Weighted soft fusion (Attention) : more generalized, inside the NN + pos_embeddings
+Challenge: In image level, data is sparser than in tile level 6K vs. 130K
 
 
-![img_1.png](img_1.png)
 
 Training 
 Based on MobileNetV2 transfer learning/full training    
@@ -59,6 +58,8 @@ Average pooling of the softmax score outside the NN
 Voiting using final classification
 Attention:
 Max welling : Gated attention (MIL)
+MIL - Like in Self-Attention : V, U are linear projection from the backbone embeddings as an input : embeddings dim MV2 embeddings_dim=1280 and attention_dim=128.
+
 Transformer encoder inspired by VIT 
 ![img_2.png](img_2.png)
 ![img_3.png](img_3.png)
